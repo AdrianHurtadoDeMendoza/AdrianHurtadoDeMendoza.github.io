@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="myApp.js"></script>
+<body>
+        <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+                Email:
+                <input type="email" name="myAddress" ng-model="myText" required>
+                <p>Edit the e-mail address, and try to change the status.</p>
+                <h1>Status</h1>
+                <p>Valid: {{myForm.myAddress.$valid}} (si es verdadero, el valor cumple todos los criterios).</p>
+                <p>Dirty: {{myForm.myAddress.$dirty}} (si es verdadero, el valor ha sido cambiado).</p>
+                <p>Touched: {{myForm.myAddress.$touched}} (si es verdadero, el campo ha estado enfocado).</p>
+                
+                </form>
+                
+</body>
+</html>

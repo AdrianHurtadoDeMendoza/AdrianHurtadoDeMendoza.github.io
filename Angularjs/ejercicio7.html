@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="myApp.js"></script>
+<body>
+           
+        <div ng-app="myApp" ng-controller="myCtrl">
+
+                <p>Idioma:</p>
+                
+                <select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars">
+                </select>
+                
+                <h1> {{selectedCar.brand}}</h1>
+                <h2> {{selectedCar.model}}</h2>
+                <h3> {{selectedCar.color}}</h3>
+                
+                <p>Seleccione un idioma.</p>
+                
+                </div>
+                
+                <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function($scope) {
+                    $scope.cars = {
+                        car01 : {brand : "Es", model : "Hola", color : "Como esta"},
+                        car02 : {brand : "En", model : "Hello", color : "how are you"},
+                        car03 : {brand : "Por", model : "Halo", color : "Como vai"}
+                    }
+                });
+                </script>
+</body>
+</html>
